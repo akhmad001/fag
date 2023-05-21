@@ -1,0 +1,138 @@
+$color: #FFFFFF;
+$width: 1440px;
+@mixin allcard($moslashuv){
+    display: flex;
+    justify-content: $moslashuv;
+    align-items: center;
+    list-style: none;
+}
+@mixin allcard1(){
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color;
+}
+@mixin allcard2(){
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: $color;
+    font-style: normal;
+}
+@mixin allcard3(){
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    color: #FFFFFF;
+    font-style: normal;
+}
+main{
+    width: $width;
+    background-image: url(../img/shutterstock_1400174219\ 1.png);
+    height: 700px;
+    margin: 0 auto;
+    .navbar{
+        width: $width;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.146875) 53.65%, rgba(0, 0, 0, 0) 100%);
+        height: 80px;
+        @include allcard(space-around);
+        .nav_img{
+            margin-left: 100px;
+        }
+        .nav_item{
+            width: 500px;
+            @include allcard(space-between);
+            .nav_link{
+                text-decoration: none;
+                @include allcard2();
+            }
+        }
+        .nav{
+            width: 180px;
+            @include allcard(space-between);
+            margin-right: 100px;
+            .nav1_link{
+                text-decoration: none;
+                @include allcard2();
+            }
+            .nav1{
+                width: 70px;
+                @include allcard(space-between)
+            }
+        }
+    }
+    .nav_box{
+        width: 1000px;
+        color: $color;
+        margin: 0 auto;
+        .box_text{
+            @include allcard2();
+            margin-top: 120px;
+            margin-left: 130px;
+        }
+        .box1_text{
+            @include allcard3();
+            transform: translate(520px, -40px)
+        }
+        .box2_text{
+            @include allcard3();
+            transform: translate(420px, -75px);
+        }
+        .nav1_box{
+            width: 314px;
+            height: 100px;
+            @include allcard1();
+            transform: translate(520px, -100px);
+        }
+        .nav2_box{
+            width: 228px;
+            @include allcard(space-between);
+            transform: translate(520px, -45px);
+            .btn{
+                background: #C58A46;
+                border-radius: 80px;
+                display: flex;
+                align-items: center;
+                padding: 18px 48px;
+                gap: 10px;
+                flex-direction: row;
+                @include allcard1();
+            }
+            .bmt{
+                width: 50px;
+                background: #C58A46;
+                border-radius: 50%;
+                height: 50px;
+            }
+        }  
+    }
+    .tbox{
+        width: $width;
+        color: $color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .tbox_text{
+            margin-left: 103px;
+            @include allcard2()
+        }
+        .tbox1{
+            display: flex;
+            width: 200px;
+            .tbox_text1{
+                color: $color;
+                @include allcard2()
+            }
+            .tbox_img{
+                width: 15px;
+                height: 12px;
+                transform: translate(10px, 11px);
+            }
+        }
+    }
+}
